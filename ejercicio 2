@@ -1,0 +1,14 @@
+int rojoPin = 13;
+int azulPin = 12;
+int verdePin = 9;
+
+void setup() {
+  pinMode(rojoPin, OUTPUT);
+  pinMode(azulPin,OUTPUT);
+   pinMode(verdePin,OUTPUT);
+   
+} 
+void loop() {
+  digitalWrite(rojoPin, HIGH);
+  digitalWrite(azulPin, HIGH);
+  digitalWrite(verdePin, HIGH);
