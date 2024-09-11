@@ -1,0 +1,27 @@
+// Definir los pines
+const int pinJoystick = A0; 
+const int pinPWM = 9;       
+
+void setup() {
+  pinMode(pinPWM, OUTPUT);
+  Serial.begin(9600);       
+}
+
+void loop() {
+ 
+  int joystickValue = analogRead(pinJoystick);
+  
+  
+  int pwmValue = map(joystickValue, 0, 1023, 0, 255);
+
+ 
+  analogWrite(pinPWM, pwmValue);
+
+  
+  Serial.print("Joystick: ");
+  Serial.print(joystickValue);
+  Serial.print(" -> PWM: ");
+  Serial.println(pwmValue);
+
+  delay(10); // Pequeña pausa
+}
